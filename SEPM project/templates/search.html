@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="with=device-width, initial-scale=1.0">
+  <title>search bar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+                body{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    min-height:100vh;
+    width:100%;
+    background-image: url('https://images.unsplash.com/photo-1614481327033-68e5df399653?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&w=1000&q=80');
+    background-position:center;
+    background-size:cover;
+    position:relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content:space-between;
+}
+nav img{
+    width: 150px;
+}
+nav-links{
+    flex:1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: orange;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+    
+}
+.text-box{
+    width: 90%;
+    color:navy;
+    position: inherit;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);    
+        }
+.text-box h1{
+    font-size:62px; 
+            
+        }   
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: none;
+    text-align: center;
+		}
+
+		input[type="text"], select {
+			display: flex;
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-sizing: border-box;
+            font-size: 16px;
+            border-radius: 60px;
+			margin-bottom: 20px;
+		}
+
+		input[type="submit"] {
+			background-color:#89CFF0;
+			padding: 10px 20px;
+			border: none;
+			cursor: pointer;
+			font-size: 16px;
+            border-radius: 19px;
+			transition: background-color 0.2s ease;
+		}
+
+		input[type="submit"]:hover {
+			background-color: bisque;
+		}
+
+.result {
+			margin-top: 30px;
+			background-color: darkcyan;
+			padding: 20px;
+			border-radius: 5px;
+			text-align: left;
+		}
+.table{
+            border-collapse: collapse;
+            text-align: center;
+            margin: 25px 0;
+            font-size: 0.9em;
+            min-width: 750px;
+            border-radius: 5px 5px 0 0;
+            overflow: hidden;
+            box-shadow: 0 0 2px rgba(0,0,0,0.15);
+}
+.table thread tr{
+            background-color: #009879;
+            color:green;
+            text-align: left;
+            font-weight: bold;        
+        }
+th{
+            background: lightblue ;
+    width:100px
+        }
+.table td{
+    padding: 12px 15px;          
+    }
+
+tr:nth-of-type(odd) {
+            background-color:gainsboro;
+        }   
+tr:last-of-type{
+    border-bottom: 2px solid #009879;
+            
+        }
+.center {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #f3f3f3;
+    text-align: center
+}
+
+    </style>
+    <title>Flask Example</title>
+    
+</head>
+  <body>
+    <section class="header">
+      <nav>
+          <a href="index.html"></a>
+          <div class="nav-links">
+              <ul>
+                  <li><a href=""><h3>HOME</h3></a></li>
+                  <li><a href=""><h3>ABOUT</h3></a></li>
+                  <li><a href=""><h3>BLOG</h3></a></li>
+                  <li><a href=""><h3>CONTACT</h3></a></li>
+              </ul>
+          </div>
+      </nav>
+      <div class="text-box">
+      <h1><br>   
+          Making Web Scraping<br> easier and accessible !</h1>
+      </div>
+      
+      <div class="table">  
+   
+    <table class="center" style="width: 90%;">
+        <tr>
+          <br>
+            <br>
+            <br>
+            <br><br>
+            <th>Parameters</th>
+            <th>Amazon Details</th>
+            <th>Flipkart Details</th>
+        </tr>
+        <tr>
+            <td>Product Title</td>
+            <td><p>{{a_producttitle}}</p></td>
+            <td><p>{{f_product_name}}</p></td>
+
+        </tr>
+        <tr>
+            <td>Product price</td>
+            <td><p>{{a_price}}</p></td>
+            <td><p>{{f_price}}</p></td>
+        </tr>
+        <tr>
+            <td>Product Review</td>
+            <td><p>{{a_review}}</p></td>
+            <td><p>{{f_review}}</p></td>
+
+        </tr>
+        <tr>
+            <td>Product Rating</td>
+            <td><p>{{a_rating}}</p></td>
+            <td><p>{{f_rating}}</p></td>
+
+        </tr>
+        <tr>
+            <td>Availability</td>
+            <td><p>{{a_availability}}</p></td>
+            <td><p>{{f_availability}}</p></td>
+
+        </tr>
+    </table>
+  </div>
+        
+</section>
+    <script>
+
+    </script>
+</body>
+</html>

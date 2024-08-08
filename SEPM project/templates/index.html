@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="with=device-width, initial-scale=1">
+    <title>search bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+                body{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    min-height:100vh;
+    width:100%;
+    background-image: url('bgm.jpg');
+    background-position:center;
+    background-size:cover;
+    position:relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content:space-between;
+}
+nav img{
+    width: 150px;
+}
+nav-links{
+    flex:1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: orange;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+    
+}
+.text-box{
+    width: 90%;
+    color:navy;
+    position: inherit;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);    
+        }
+.text-box h1{
+    font-size:62px; 
+            
+        }   
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: none;
+    text-align: center;
+		}
+
+		input[type="text"], select {
+			display: flex;
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-sizing: border-box;
+            font-size: 16px;
+            border-radius: 60px;
+			margin-bottom: 20px;
+		}
+
+		input[type="submit"] {
+			background-color:#89CFF0;
+			padding: 10px 20px;
+			border: none;
+			cursor: pointer;
+			font-size: 16px;
+            border-radius: 19px;
+			transition: background-color 0.2s ease;
+		}
+
+		input[type="submit"]:hover {
+			background-color: bisque;
+		}
+
+.result {
+			margin-top: 30px;
+			background-color: darkcyan;
+			padding: 20px;
+			border-radius: 5px;
+			text-align: left;
+		}
+    </style>
+  </head>
+  <body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="C:\Users\sandh\Sandhya\SEPM project\prj.png"
+                                      width="100"
+                                      height="100"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html"><h3>HOME</h3></a></li>
+                    <li><a href="aboutus.html"><h3>ABOUT</h3></a></li>
+                    <li><a href=""><h3>BLOG</h3></a></li>
+                    <li><a href="contact.html"><h3>CONTACT</h3></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text-box">
+        <h1><br>   
+            Making Web Scraping<br> easier and accessible !</h1>
+        </div>
+
+    <div class="container">
+      <form method="POST" action="http://127.0.0.1:5000/search">
+        
+        <select id="element" name="search">
+            <option value="h">Search product</option>
+            <option>Lenovo IdeaPad 3 11th Gen Intel Core i3 15.6" FHD Thin & Light laptop</option>
+            <option>Canon EOS 1500D 24.1 Digital SLR Camera</option>
+            <option>boAt Airdopes 141 Bluetooth Truly Wireless in Ear Earbuds with 42H Playtime</option>
+            <option>Panasonic SC-HT460GW-K 100 W Bluetooth Home Theatre</option>
+            <option>EGate i9 Pro-Max 1080p Native Full HD Projector 4k Support</option>
+            <option>boAt AAVANTE BAR 500</option>
+            <option>OnePlus 80 cm (32 inches) Y Series HD Ready LED Smart Android TV 32Y1</option>
+            <option>OnePlus 10R 5G Forest Green, 8GB RAM, 128GB Storage</option>
+            <option>Samsung Galaxy Tab A8 26.69cm (10.5 inch) Display, RAM 4 GB, ROM 64 GB Expandable Tablet</option>
+            <option>HP Deskjet 2331 Colour Printer, Scanner and Copier</option>
+            <option>ASUS Vivo AiO V222, 4 core Intel Pentium Silver J5040, All-in-One Desktop</option>
+            <option>Swiner 3XL Bean Bag with Footrest with Cushion Ready to Use with Beans</option>
+            <option>Sleepyhead Kiki - 3+2 Seater Sofa Set</option>
+            <option>ShadowKart Ottoman Pouffes Stool</option>
+            <option>CELLBELL Desire C104 Mesh Mid-Back Ergonomic Office Chair</option>
+            <option>LG 1.5 Ton 5 Star AI DUAL Inverter Split AC</option>
+            <option>Bajaj New Shakti Neo 15L Vertical Storage Water Heater</option>
+            <option>Voltas Beko 8 Place Settings Table Top Dishwasher</option>
+            <option>Panasonic 20L Solo Microwave Oven</option>
+            <option>Elica 60 cm 1200 m3/hr Filterless Auto Clean Chimney</option>
+        </select>
+        <input type="submit" value="scrape">
+    </div>
+            
+        
+      </form>
+    </body>
+</html>
+
+
+
+
+
